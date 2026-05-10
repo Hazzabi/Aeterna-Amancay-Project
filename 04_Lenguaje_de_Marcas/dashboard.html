@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel | Aeterna Amancay</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/amancay-flor.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="Js/site.js" defer></script>
+  <script src="Js/dashboard.js" defer></script>
+</head>
+<body>
+  <div id="fondo-estelar" aria-hidden="true"></div>
+
+  <nav aria-label="Principal">
+    <a href="index.html" class="logo-navegacion">
+      <img src="assets/aeterna-logo.svg" alt="Logotipo Aeterna Amancay">
+      <span class="texto-logo-navegacion">
+        <span class="titulo-logo-navegacion">Aeterna Amancay</span>
+        <span class="subtitulo-logo-navegacion">Espejo de Obsidiana</span>
+      </span>
+    </a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <img class="icono-boton-menu" src="assets/amancay-flor.svg" alt="">
+    </button>
+    <ul class="enlaces-navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="misiones.html">Misiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="dashboard.html" class="activo">Panel</a></li>
+    </ul>
+    <button id="boton-cerrar-sesion" class="acceso-navegacion" type="button">Cerrar sesión</button>
+  </nav>
+
+  <header class="encabezado-pagina portada-panel">
+    <div class="texto-portada-panel">
+      <span class="ceja">Centro privado</span>
+      <h1 class="titulo-pagina" id="cliente-bienvenida">Preparando tu panel de misión...</h1>
+      <p id="cliente-detalle">
+        Consulta el estado de tus satélites, los hitos de contrato y la actividad reciente de tu cuenta.
+      </p>
+    </div>
+  </header>
+
+  <section class="seccion indicadores-panel" aria-labelledby="titulo-indicadores">
+    <div class="encabezado-seccion">
+      <span class="ceja">Resumen de cliente</span>
+      <h2 id="titulo-indicadores" class="titulo-seccion">Indicadores clave</h2>
+    </div>
+    <div id="indicadores-panel" class="cuadricula-metricas" aria-live="polite">
+      <article class="tarjeta-metrica">
+        <span class="valor-metrica">--</span>
+        <span class="etiqueta-metrica">Satélites</span>
+      </article>
+      <article class="tarjeta-metrica">
+        <span class="valor-metrica">--</span>
+        <span class="etiqueta-metrica">Energía media</span>
+      </article>
+      <article class="tarjeta-metrica">
+        <span class="valor-metrica">--</span>
+        <span class="etiqueta-metrica">Contratos activos</span>
+      </article>
+      <article class="tarjeta-metrica">
+        <span class="valor-metrica">--</span>
+        <span class="etiqueta-metrica">Eventos recientes</span>
+      </article>
+    </div>
+  </section>
+
+  <main class="seccion cuadricula-panel">
+    <section class="panel-control" aria-labelledby="titulo-telemetria">
+      <div class="encabezado-seccion">
+        <span class="ceja">Seguimiento técnico</span>
+        <h2 id="titulo-telemetria" class="titulo-panel">Satélites activos</h2>
+      </div>
+      <div id="panel-telemetria" class="lista-telemetria">
+        <div class="estado-vacio">Cargando telemetría...</div>
+      </div>
+    </section>
+
+    <section class="panel-control" aria-labelledby="titulo-actividad">
+      <div class="encabezado-seccion">
+        <span class="ceja">Actividad</span>
+        <h2 id="titulo-actividad" class="titulo-panel">Accesos e incidencias</h2>
+      </div>
+      <div id="panel-actividad" class="lista-actividad">
+        <div class="estado-vacio">Cargando actividad...</div>
+      </div>
+    </section>
+
+    <section class="panel-control panel-control-ancho" aria-labelledby="titulo-contratos">
+      <div class="encabezado-seccion">
+        <span class="ceja">Contratación</span>
+        <h2 id="titulo-contratos" class="titulo-panel">Estado económico de tus programas</h2>
+        <p class="nota-tabla">
+          Revisa el avance general de cada contrato, sus hitos y el momento operativo de cada encargo.
+        </p>
+      </div>
+      <div id="panel-contratos" class="envoltorio-tabla">
+        <div class="estado-vacio">Cargando contratos...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="cuadricula-pie">
+      <div>
+        <div class="marca-pie">Aeterna Amancay</div>
+        <p class="texto-pie">Espacio privado para clientes con seguimiento activo y documentación de misión.</p>
+        <p class="texto-pie">© 2026 Aeterna Amancay. Todos los derechos reservados.</p>
+      </div>
+      <div class="datos-pie">
+        <strong>Sedes</strong>
+        Sede Alborada · Paseo de la Alborada 27, Madrid<br>
+        Centro El Santuario · Operaciones espaciales y control de misión
+      </div>
+      <div class="datos-pie">
+        <strong>Contacto</strong>
+        +34 91 684 22 17<br>
+        contacto@aeternaamancay.com<br>
+        guardianes@aeternaamancay.com
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

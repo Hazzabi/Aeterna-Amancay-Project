@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso | Aeterna Amancay</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/amancay-flor.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="Js/site.js" defer></script>
+  <script src="Js/login.js" defer></script>
+</head>
+<body>
+  <div id="fondo-estelar" aria-hidden="true"></div>
+
+  <nav aria-label="Principal">
+    <a href="index.html" class="logo-navegacion">
+      <img src="assets/aeterna-logo.svg" alt="Logotipo Aeterna Amancay">
+      <span class="texto-logo-navegacion">
+        <span class="titulo-logo-navegacion">Aeterna Amancay</span>
+        <span class="subtitulo-logo-navegacion">Acceso seguro</span>
+      </span>
+    </a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <img class="icono-boton-menu" src="assets/amancay-flor.svg" alt="">
+    </button>
+    <ul class="enlaces-navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="misiones.html">Misiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="dashboard.html">Panel</a></li>
+    </ul>
+    <a href="contacto.html" class="acceso-navegacion">Escribirnos</a>
+  </nav>
+
+  <main class="contenedor-acceso">
+    <section class="tarjeta-acceso" aria-labelledby="titulo-acceso">
+      <header class="encabezado-acceso">
+        <img class="marca-acceso" src="assets/amancay-flor.svg" alt="Flor de Amancay">
+        <span class="ceja">Zona cliente</span>
+        <h1 id="titulo-acceso" class="titulo-acceso">Acceso privado</h1>
+        <p class="texto-acceso">
+          Este espacio está reservado para clientes con seguimiento activo, documentación de misión
+          y consulta de estado operativo.
+        </p>
+      </header>
+
+      <form id="formulario-acceso" class="cuadricula-formulario" novalidate>
+        <div class="campo">
+          <label for="campo-usuario">Identificador de Alma</label>
+          <input id="campo-usuario" name="usuario" type="text" autocomplete="username" placeholder="Ej. gov_espana">
+        </div>
+
+        <div class="campo">
+          <label for="campo-sello">Sello de Acceso</label>
+          <input id="campo-sello" name="clave" type="password" autocomplete="current-password" placeholder="Clave de cliente">
+        </div>
+
+        <button id="boton-acceder" class="boton-acceder" type="submit">Entrar en el portal</button>
+      </form>
+
+      <div id="mensaje-estado" aria-live="polite"></div>
+
+      <aside class="nota-seguridad">
+        <strong>Acceso protegido:</strong> si necesitas alta de cliente o recuperación de acceso,
+        escríbenos desde la página de contacto y el equipo de Guardianes IT te ayudará.
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="cuadricula-pie">
+      <div>
+        <div class="marca-pie">Aeterna Amancay</div>
+        <p class="texto-pie">Atención segura para clientes institucionales, científicos y estratégicos.</p>
+        <p class="texto-pie">© 2026 Aeterna Amancay. Todos los derechos reservados.</p>
+      </div>
+      <div class="datos-pie">
+        <strong>Sedes</strong>
+        Sede Alborada · Paseo de la Alborada 27, Madrid<br>
+        Centro El Santuario · Operaciones espaciales y control de misión
+      </div>
+      <div class="datos-pie">
+        <strong>Contacto</strong>
+        +34 91 684 22 17<br>
+        contacto@aeternaamancay.com<br>
+        guardianes@aeternaamancay.com
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

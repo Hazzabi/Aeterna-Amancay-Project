@@ -1,0 +1,69 @@
+Configuración de Routers
+Router R-Alborada
+text
+enable
+configure terminal
+hostname R-Alborada
+
+interface Serial0/0/0
+ ip address 10.0.0.1 255.255.255.252
+ clock rate 2000000
+ no shutdown
+
+interface Serial0/0/1
+ ip address 10.0.0.5 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/0
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/1
+ ip address 172.20.4.1 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+ network 172.20.4.0 0.0.0.3 area 0
+ default-information originate always
+ passive-interface default
+ no passive-interface Serial0/0/0
+ no passive-interface Serial0/0/1
+ no passive-interface GigabitEthernet0/1
+
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0
+
+end
+write memory
+Router R-Santuario
+text
+enable
+configure terminal
+hostname R-Santuario
+
+interface Serial0/0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+
+interface Serial0/0/1
+ ip address 10.0.0.6 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/1
+ ip address 172.20.4.5 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 2.2.2.2
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+ network 172.20.4.4 0.0.0.3 area 0
+ passive-interface default
+ no passive-interface Serial0/0/0
+ no passive-interface Serial0/0/1
+ no passive-interface GigabitEthernet0/1
+
+end
+write memory

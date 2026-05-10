@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Aeterna Amancay</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/amancay-flor.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="Js/site.js" defer></script>
+</head>
+<body>
+  <div id="fondo-estelar" aria-hidden="true"></div>
+
+  <nav aria-label="Principal">
+    <a href="index.html" class="logo-navegacion">
+      <img src="assets/aeterna-logo.svg" alt="Logotipo Aeterna Amancay">
+      <span class="texto-logo-navegacion">
+        <span class="titulo-logo-navegacion">Aeterna Amancay</span>
+        <span class="subtitulo-logo-navegacion">Canal directo</span>
+      </span>
+    </a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <img class="icono-boton-menu" src="assets/amancay-flor.svg" alt="">
+    </button>
+    <ul class="enlaces-navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="misiones.html">Misiones</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+      <li><a href="dashboard.html">Panel</a></li>
+    </ul>
+    <a href="login.html" class="acceso-navegacion">Zona cliente</a>
+  </nav>
+
+  <header class="encabezado-pagina">
+    <span class="ceja">Contacto</span>
+    <h1 class="titulo-pagina">Cuéntanos qué necesitas poner en órbita</h1>
+    <p class="texto-pagina">
+      Atendemos solicitudes comerciales, alianzas estratégicas, soporte de cliente y consultas
+      institucionales desde la Sede Alborada, con coordinación directa con nuestro centro operativo.
+    </p>
+  </header>
+
+  <main class="seccion cuadricula-contacto">
+    <section class="panel-contacto" aria-labelledby="titulo-datos">
+      <div class="encabezado-seccion">
+        <span class="ceja">Datos de contacto</span>
+        <h2 id="titulo-datos" class="titulo-panel">Estamos disponibles para hablar</h2>
+      </div>
+
+      <div class="lista-contacto">
+        <article class="elemento-contacto">
+          <strong>Sede Alborada</strong>
+          Paseo de la Alborada 27<br>
+          28045 Madrid, España
+        </article>
+        <article class="elemento-contacto">
+          <strong>Centro El Santuario</strong>
+          Coordinación de operaciones, control de misión y soporte técnico especializado.
+        </article>
+        <article class="elemento-contacto">
+          <strong>Canales directos</strong>
+          +34 91 684 22 17<br>
+          contacto@aeternaamancay.com<br>
+          guardianes@aeternaamancay.com
+        </article>
+        <article class="elemento-contacto">
+          <strong>Horario</strong>
+          Oficina comercial · 08:00 a 19:00<br>
+          Soporte prioritario de misión · 24/7
+        </article>
+      </div>
+    </section>
+
+    <section class="panel-formulario" aria-labelledby="titulo-formulario">
+      <div class="encabezado-seccion">
+        <span class="ceja">Formulario</span>
+        <h2 id="titulo-formulario" class="titulo-panel">Escríbenos</h2>
+        <p class="texto-seccion">
+          Déjanos una referencia de tu proyecto y te responderemos desde el equipo comercial,
+          técnico o de operaciones según el caso.
+        </p>
+      </div>
+
+      <form class="formulario-contacto">
+        <div class="campo">
+          <label for="nombre-contacto">Nombre</label>
+          <input id="nombre-contacto" type="text" placeholder="Tu nombre o entidad">
+        </div>
+        <div class="campo">
+          <label for="correo-contacto">Correo electrónico</label>
+          <input id="correo-contacto" type="email" placeholder="nombre@organizacion.com">
+        </div>
+        <div class="campo">
+          <label for="tipo-contacto">Motivo</label>
+          <select id="tipo-contacto">
+            <option>Consulta comercial</option>
+            <option>Soporte de cliente</option>
+            <option>Alianza institucional</option>
+            <option>Medios y comunicación</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensaje-contacto">Mensaje</label>
+          <textarea id="mensaje-contacto" placeholder="Cuéntanos el contexto, el alcance y el tipo de acompañamiento que necesitas."></textarea>
+        </div>
+        <button class="boton" type="submit">Enviar consulta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="cuadricula-pie">
+      <div>
+        <div class="marca-pie">Aeterna Amancay</div>
+        <p class="texto-pie">Ingeniería orbital y lectura del territorio para clientes que necesitan visión de largo alcance.</p>
+        <p class="texto-pie">© 2026 Aeterna Amancay. Todos los derechos reservados.</p>
+      </div>
+      <div class="datos-pie">
+        <strong>Sedes</strong>
+        Sede Alborada · Paseo de la Alborada 27, Madrid<br>
+        Centro El Santuario · Operaciones espaciales y control de misión
+      </div>
+      <div class="datos-pie">
+        <strong>Contacto</strong>
+        +34 91 684 22 17<br>
+        contacto@aeternaamancay.com<br>
+        guardianes@aeternaamancay.com
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

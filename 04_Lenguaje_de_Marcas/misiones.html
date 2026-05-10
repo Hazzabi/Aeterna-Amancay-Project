@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misiones | Aeterna Amancay</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/amancay-flor.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="Js/site.js" defer></script>
+  <script src="Js/misiones.js" defer></script>
+</head>
+<body>
+  <div id="fondo-estelar" aria-hidden="true"></div>
+
+  <nav aria-label="Principal">
+    <a href="index.html" class="logo-navegacion">
+      <img src="assets/aeterna-logo.svg" alt="Logotipo Aeterna Amancay">
+      <span class="texto-logo-navegacion">
+        <span class="titulo-logo-navegacion">Aeterna Amancay</span>
+        <span class="subtitulo-logo-navegacion">Registro orbital</span>
+      </span>
+    </a>
+    <button class="boton-menu" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+      <img class="icono-boton-menu" src="assets/amancay-flor.svg" alt="">
+    </button>
+    <ul class="enlaces-navegacion">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="misiones.html" class="activo">Misiones</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="dashboard.html">Panel</a></li>
+    </ul>
+    <a href="login.html" class="acceso-navegacion">Zona cliente</a>
+  </nav>
+
+  <header class="encabezado-pagina">
+    <span class="ceja">Archivo orbital</span>
+    <h1 class="titulo-pagina">Misiones que han marcado nuestra trayectoria</h1>
+    <p class="texto-pagina">
+      Cada despliegue resume meses de ingeniería, coordinación logística y lectura precisa del contexto.
+      Este registro reúne algunas de las misiones que han definido la presencia orbital de Aeterna Amancay.
+    </p>
+  </header>
+
+  <section class="seccion" aria-label="Resumen de misiones">
+    <div class="fila-resumen" id="resumen-misiones" aria-live="polite">
+      <article class="tarjeta-resumen">
+        <strong>--</strong>
+        <span>Total de misiones</span>
+      </article>
+      <article class="tarjeta-resumen">
+        <strong>--</strong>
+        <span>Último cliente</span>
+      </article>
+      <article class="tarjeta-resumen">
+        <strong>--</strong>
+        <span>Estado predominante</span>
+      </article>
+    </div>
+
+    <div id="estado-carga" class="caja-estado cargando" aria-live="polite">
+      Preparando el registro del firmamento...
+    </div>
+  </section>
+
+  <main class="seccion contenedor-linea-tiempo" aria-labelledby="titulo-linea-tiempo">
+    <div class="encabezado-seccion">
+      <span class="ceja">Trayectoria</span>
+      <h2 id="titulo-linea-tiempo" class="titulo-seccion">Despegues, clientes y resultados</h2>
+    </div>
+    <div id="contenedor-misiones" class="lista-linea-tiempo"></div>
+  </main>
+
+  <footer>
+    <div class="cuadricula-pie">
+      <div>
+        <div class="marca-pie">Aeterna Amancay</div>
+        <p class="texto-pie">
+          Una línea de tiempo construida para mostrar el carácter y la evolución de nuestras operaciones
+          orbitales.
+        </p>
+        <p class="texto-pie">© 2026 Aeterna Amancay. Todos los derechos reservados.</p>
+      </div>
+      <div class="datos-pie">
+        <strong>Sedes</strong>
+        Sede Alborada · Paseo de la Alborada 27, Madrid<br>
+        Centro El Santuario · Operaciones espaciales y control de misión
+      </div>
+      <div class="datos-pie">
+        <strong>Contacto</strong>
+        +34 91 684 22 17<br>
+        contacto@aeternaamancay.com<br>
+        guardianes@aeternaamancay.com
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

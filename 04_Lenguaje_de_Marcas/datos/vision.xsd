@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Estados posibles para cuentas de acceso -->
+  <xs:simpleType name="estadoUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="activa"/>
+      <xs:enumeration value="bloqueada"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Estados de resultado para las misiones de despegue -->
+  <xs:simpleType name="estadoMision">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="exito total"/>
+      <xs:enumeration value="parcial"/>
+      <xs:enumeration value="pendiente"/>
+      <xs:enumeration value="fallido"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Estados reutilizados en paneles para satelites y contratos -->
+  <xs:simpleType name="estadoPanel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="activo"/>
+      <xs:enumeration value="en pausa"/>
+      <xs:enumeration value="cobrado"/>
+      <xs:enumeration value="pendiente"/>
+      <xs:enumeration value="en orbita"/>
+      <xs:enumeration value="en construccion"/>
+      <xs:enumeration value="retirado"/>
+      <xs:enumeration value="alerta"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Rango de energia para cada satelite en porcentaje -->
+  <xs:simpleType name="porcentajeEnergia">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="aeterna">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="empresa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="lema" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="usuarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="acceso" type="xs:string"/>
+                    <xs:element name="clave" type="xs:string"/>
+                    <xs:element name="estado" type="estadoUsuario"/>
+                    <xs:element name="tipo" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="misiones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mision" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="fecha" type="xs:date"/>
+                    <xs:element name="cliente" type="xs:string"/>
+                    <xs:element name="estado" type="estadoMision"/>
+                    <xs:element name="detalle" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="paneles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="panel" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="satelites">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="satelite" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="energia" type="porcentajeEnergia"/>
+                                <xs:element name="altitud" type="xs:decimal"/>
+                                <xs:element name="estado" type="estadoPanel"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="contratos">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="contrato" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="importe" type="xs:decimal"/>
+                                <xs:element name="estado" type="estadoPanel"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="actividad">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="evento" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="fecha" type="xs:dateTime"/>
+                                <xs:element name="texto" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id_usuario" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

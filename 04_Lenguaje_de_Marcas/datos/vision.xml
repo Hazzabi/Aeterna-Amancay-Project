@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aeterna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vision.xsd">
+  <!-- Datos institucionales de la empresa -->
+  <empresa>
+    <nombre>Aeterna Amancay</nombre>
+    <lema>Ingenieria orbital con raiz andina</lema>
+  </empresa>
+
+  <!-- Usuarios cliente alineados con Clientes + Cuentas_Acceso -->
+  <usuarios>
+    <usuario id="C1">
+      <nombre>Ministerio de Ciencia de Espana</nombre>
+      <acceso>mciencia</acceso>
+      <clave>hash_cli_01</clave>
+      <estado>activa</estado>
+      <tipo>institucional</tipo>
+    </usuario>
+    <usuario id="C2">
+      <nombre>GeoScan Analytics SL</nombre>
+      <acceso>geoscan</acceso>
+      <clave>hash_cli_02</clave>
+      <estado>activa</estado>
+      <tipo>privado</tipo>
+    </usuario>
+    <usuario id="C3">
+      <nombre>NorthSky Dynamics</nombre>
+      <acceso>northsky</acceso>
+      <clave>hash_cli_03</clave>
+      <estado>activa</estado>
+      <tipo>internacional</tipo>
+    </usuario>
+    <usuario id="C4">
+      <nombre>Orbital Agro Labs</nombre>
+      <acceso>oagrolabs</acceso>
+      <clave>hash_cli_04</clave>
+      <estado>activa</estado>
+      <tipo>agrotech</tipo>
+    </usuario>
+  </usuarios>
+
+  <!-- Resumen de misiones basado en Misiones_Despegue + Proyectos -->
+  <misiones>
+    <mision id="M1">
+      <nombre>Atlas-1</nombre>
+      <fecha>2026-01-27</fecha>
+      <cliente>Ministerio de Ciencia de Espana</cliente>
+      <estado>exito total</estado>
+      <detalle>Lanzamiento completado en la plataforma El Santuario con despliegue orbital estable.</detalle>
+    </mision>
+    <mision id="M2">
+      <nombre>Helios-Coast</nombre>
+      <fecha>2026-02-14</fecha>
+      <cliente>GeoScan Analytics SL</cliente>
+      <estado>exito total</estado>
+      <detalle>Despegue desde Alborada con enlace de telemetria sostenido en ventana inicial.</detalle>
+    </mision>
+    <mision id="M3">
+      <nombre>Polaris-Edge</nombre>
+      <fecha>2026-08-03</fecha>
+      <cliente>NorthSky Dynamics</cliente>
+      <estado>parcial</estado>
+      <detalle>Insercion orbital conseguida con ajustes posteriores en comunicaciones seguras.</detalle>
+    </mision>
+    <mision id="M4">
+      <nombre>AgroSense-Iberia</nombre>
+      <fecha>2026-09-11</fecha>
+      <cliente>Orbital Agro Labs</cliente>
+      <estado>pendiente</estado>
+      <detalle>Mision programada con preparacion de carga util en curso.</detalle>
+    </mision>
+  </misiones>
+
+  <!-- Panel por cliente: satelites, contratos y actividad reciente -->
+  <paneles>
+    <panel id_usuario="C1">
+      <satelites>
+        <satelite>
+          <nombre>CONSTELACION-01</nombre>
+          <energia>82</energia>
+          <altitud>542.250</altitud>
+          <estado>en orbita</estado>
+        </satelite>
+        <satelite>
+          <nombre>CONSTELACION-02</nombre>
+          <energia>0</energia>
+          <altitud>0</altitud>
+          <estado>en construccion</estado>
+        </satelite>
+      </satelites>
+      <contratos>
+        <contrato>
+          <nombre>Programa Atlas CubeSat 2026</nombre>
+          <importe>4800000</importe>
+          <estado>activo</estado>
+        </contrato>
+      </contratos>
+      <actividad>
+        <evento>
+          <fecha>2026-04-21T12:04:22</fecha>
+          <texto>Consulta de factura FAC-2026-0012 desde portal cliente.</texto>
+        </evento>
+      </actividad>
+    </panel>
+
+    <panel id_usuario="C2">
+      <satelites>
+        <satelite>
+          <nombre>HELIOS-ALFA</nombre>
+          <energia>76</energia>
+          <altitud>611.010</altitud>
+          <estado>en orbita</estado>
+        </satelite>
+      </satelites>
+      <contratos>
+        <contrato>
+          <nombre>Monitorizacion Costera Helios</nombre>
+          <importe>1350000</importe>
+          <estado>activo</estado>
+        </contrato>
+      </contratos>
+      <actividad>
+        <evento>
+          <fecha>2026-02-21T16:41:00</fecha>
+          <texto>Confirmacion de pago registrada para FAC-2026-0020.</texto>
+        </evento>
+      </actividad>
+    </panel>
+
+    <panel id_usuario="C3">
+      <satelites>
+        <satelite>
+          <nombre>POLARIS-01</nombre>
+          <energia>63</energia>
+          <altitud>503.600</altitud>
+          <estado>en construccion</estado>
+        </satelite>
+      </satelites>
+      <contratos>
+        <contrato>
+          <nombre>Constelacion Polaris-Edge</nombre>
+          <importe>7200000</importe>
+          <estado>activo</estado>
+        </contrato>
+      </contratos>
+      <actividad>
+        <evento>
+          <fecha>2026-04-22T14:33:40</fecha>
+          <texto>Descarga de contrato principal desde cuenta NorthSky.</texto>
+        </evento>
+      </actividad>
+    </panel>
+
+    <panel id_usuario="C4">
+      <satelites>
+        <satelite>
+          <nombre>AGRO-ORBIT-01</nombre>
+          <energia>58</energia>
+          <altitud>490.430</altitud>
+          <estado>en construccion</estado>
+        </satelite>
+      </satelites>
+      <contratos>
+        <contrato>
+          <nombre>AgroSense Orbital Iberia</nombre>
+          <importe>2150000</importe>
+          <estado>en pausa</estado>
+        </contrato>
+      </contratos>
+      <actividad>
+        <evento>
+          <fecha>2026-04-17T19:48:55</fecha>
+          <texto>Ultimo acceso registrado desde cliente Orbital Agro Labs.</texto>
+        </evento>
+      </actividad>
+    </panel>
+  </paneles>
+</aeterna>
