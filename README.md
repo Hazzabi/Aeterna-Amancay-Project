@@ -1,4 +1,4 @@
-```markdown
+
 # Aeterna Amancay - Proyecto Intermodular ASIR 1º
 
 **Infraestructura TI completa para una empresa aeroespacial**
