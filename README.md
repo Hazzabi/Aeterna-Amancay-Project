@@ -1,11 +1,6 @@
 
 # Aeterna Amancay - Proyecto Intermodular ASIR 1º
 
-**Infraestructura TI completa para una empresa aeroespacial**
-
-[Web en producción](https://aeterna-amancay.netlify.app/)
-[Repositorio GitHub](https://github.com/Hazzabi/Aeterna-Amancay-Project)
-
 ---
 
 ## La Empresa
