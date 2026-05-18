@@ -55,7 +55,9 @@ Aeterna-Amancay-Project/
 │   └── Infraestructura Hardware
 │
 └── 06_Cloud/                       # Módulo Optativo - Computación en la Nube
-    └── Arquitectura AWS
+    └── Infraestructura Cloud
+    └── Esquema Cloud
+
 ```
 
 ---
